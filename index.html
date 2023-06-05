@@ -224,7 +224,7 @@ line.bot.handler.path=/callback
 <h2 is-upgraded>フォローされた時の返答用クラスの作成</h2>
 <p>先ほど作ったPushクラスとは別に、ソース・パッケージ（src/main/java）にクラスを作る。</p>
 <p><code>com.example.linebot.replier</code> パッケージの中に、<code>Replire</code> インターフェースを作る。<br> これにより、このインターフェースの実装クラスは、必ず <code>Message reply() {...};</code> メソッドを作る、という制限をする</p>
-<p>IntelliJ IDEAでは、クラス作成時に インターフェース (interface) を選べば良い。<br><img alt="インターフェースの作成" src="img/7d4914bd9b4f7eb8.png"></p>
+<p>IntelliJ IDEAでは、クラス作成時に インターフェース (interface) を選べば良い。<br><img alt="インターフェースの作成" src="img/58cd4acaf0ae9e6f.png"></p>
 <pre><code language="language-java" class="language-java">package com.example.linebot.replier;
 
 import com.linecorp.bot.model.message.Message;
@@ -237,7 +237,7 @@ public interface Replier {
 
 }
 </code></pre>
-<p><code>com.example.linebot.replier</code> パッケージの中に、<code>Reply</code> を実装する <code>Follow</code> クラスを作る。<br><code>imprements</code> キーワードを用いることに注意！</p>
+<p><code>com.example.linebot.replier</code> パッケージの中に、<code>Replire</code> を実装する <code>Follow</code> クラスを作る。<br><code>imprements</code> キーワードを用いることに注意！</p>
 <pre><code language="language-java" class="language-java">package com.example.linebot.replier;
 
 import com.linecorp.bot.model.event.FollowEvent;
@@ -301,7 +301,7 @@ public class Callback {
       <google-codelab-step label="話しかけに応答するプログラムを作成する" duration="0">
         <p>こちらから話しかけたことに応答するようにBotを改良する。</p>
 <h2 is-upgraded>Parrot クラスを作成</h2>
-<p><code>com.example.linebot.replier</code> パッケージの中に、<code>Reply</code> を実装する <code>Parrot</code> クラスを作る。<br><code>imprements</code> キーワードを用いることに注意！</p>
+<p><code>com.example.linebot.replier</code> パッケージの中に、<code>Replier</code> を実装する <code>Parrot</code> クラスを作る。<br><code>imprements</code> キーワードを用いることに注意！</p>
 <pre><code language="language-java" class="language-java">package com.example.linebot.replier;
 
 import com.linecorp.bot.model.event.MessageEvent;
